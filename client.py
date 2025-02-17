@@ -20,6 +20,16 @@ def start_client():
                 client.close()
                 break
             client.send(message.encode('utf-8'))
+
+            server_response = client.recv(1024).decode('utf-8')
+            if server_response == "Host desconectando...":
+                print(f"[SERVER] {server_response} Desconectando agora.")
+                client.close()
+                break
+            print(f"[SERVER] {server_response}")
+
+    except ConnectionResetError:
+        print("\n[ERROR] Connection lost. Server might be down.")
     except KeyboardInterrupt:
         print("\n[DISCONNECTED] Client disconnected.")
     finally:

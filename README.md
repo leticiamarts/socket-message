@@ -68,6 +68,11 @@ python server.py
 ```
 The server will start and wait for incoming client connections.
 
+Server connection can be closed by the following command on running terminal:
+```
+shutdown
+```
+
 
 #### Running the Client
 In another terminal, with the virtual environment activated, run the client:
@@ -76,7 +81,7 @@ In another terminal, with the virtual environment activated, run the client:
 python client.py
 ```
 
-Once connected, the client will allow you to input messages, which will be sent to the server. Type "exit" to close the connection.
+Once connected, the client will allow you to input messages, which will be sent to the server. Type `exit` to close the connection.
 
 ## Communication
 - The client sends messages to the server using TCP sockets.
