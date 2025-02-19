@@ -8,7 +8,7 @@ HOST = os.getenv('HOST')
 PORT = int(os.getenv('PORT'))
 
 def start_client():
-    # cria um socket TCP/IP
+    # cria um socket TCP/IP usando o protocolo IPV4
     client = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
     """
     socket.AF_INET: especifica que o protocolo IPv4 (endereço IP + porta) está sendo usado

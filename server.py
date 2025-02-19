@@ -69,7 +69,7 @@ def wait_for_shutdown(server_socket): # função agurda um comando de desligamen
             break
 
 def start_server():
-    server = socket.socket(socket.AF_INET, socket.SOCK_STREAM) # cria um socket TCP/IP
+    server = socket.socket(socket.AF_INET, socket.SOCK_STREAM) # cria um socket TCP/IP usando o protocolo IPV4
     server.bind((HOST, PORT)) # associa o socket ao IP e porta específicos
     server.listen() # servidor entra em modo escuta para conexões de clientes
     print(f"[WAITING CONNECTION] Server listening at {HOST}:{PORT}", flush=True)
